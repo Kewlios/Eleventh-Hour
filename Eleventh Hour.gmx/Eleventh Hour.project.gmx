@@ -6,16 +6,28 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sPlayer</sprite>
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_box</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scr_text.gml</script>
+    <script>scripts\scr_top_instance_position.gml</script>
+  </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\oPlayer</object>
+    <object>objects\obj_player</object>
     <object>objects\obj_textbox</object>
+    <object>objects\obj_text</object>
+    <object>objects\obj_spawner</object>
+    <object>objects\obj_box</object>
+    <object>objects\obj_control</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
+    <room>rooms\rm_play</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
