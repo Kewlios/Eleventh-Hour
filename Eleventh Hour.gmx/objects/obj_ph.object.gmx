@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*///Message Arrays and other variables
+            <string>/// Create Variables
+// Click Sprite
+selected = false;
+image_speed = 0;
+
+///Message Arrays and other variables
 //write your messages in an array, starting at 0, like so
 message[0] = "Hello there! Welcome to the world of Pokemon!";
 message[1] = "My name is Oak! People call me the Pokemon Prof!";
@@ -65,7 +70,10 @@ message_length = string_length(message[message_current]); //get the number of ch
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*///The left button
+            <string>/// Update the image_index
+image_index = selected;
+
+///The left button
 //If the left mb is pressed when the current character isn't the last then it speeds up.
 //If the left mb is pressed when the current character is past the last character then it ends.
 if (characters &lt; message_length) { //if current character count is less than the amount in current message* 
@@ -91,6 +99,42 @@ else { //if current character is more than the amount in the current message
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Spawns obj_actbox instances once clicked
+
+var str;
+switch (irandom(4))
+{
+    case 0: str = "Four lines of text in the object#Four Lines!#FOUR LIIIIINES!#Yup..."; break;
+    case 1: str = "What the fuck?#Shit..."; break;
+    case 2: str = "This line is hella fuckin' long, don't'cha think so, buddy-pal?"; break;
+    case 3: str = "You All Would Have If I Would Have#Versus#Y'all'd've'f'i'd've!"; break;
+    case 4: str = "uhhhh."; break;
+    default: str = "we dem boiz"; break;
+}
+//scr_actionbox(str, 1, mouse_x, mouse_y);
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -108,7 +152,7 @@ else { //if current character is more than the amount in the current message
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*///Draw the textbox
+            <string>///Draw the textbox
 draw_text(x, y, message_draw); //draw the text at the coordinates
 </string>
           </argument>

@@ -1,13 +1,14 @@
-/* /// scr_text("text", speed, x, y);
+/// scr_actionbox("text", x, y);
 
-//Creates an instance of obj_text 
-txt = instance_create(argument2, argument3, obj_dialogue);
+//Creates an instance of obj_actbox
+
+txt = instance_create(argument1, argument2, obj_actbox);
+
 with (txt)
 {
-    padding = 16;
+    padding = 8;
     maxlength = view_wview[0];
     text = argument0;
-    spd = argument1;
     font = fnt;
     
     text_length = string_length(text);

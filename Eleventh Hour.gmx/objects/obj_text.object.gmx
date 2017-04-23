@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Once object is created; it assigns these variables
+            <string>/*/// Once object is created; it assigns these variables
 alpha = 0;
 print = "";
 time = 0;
@@ -52,7 +52,7 @@ depth = depth - instance_number(obj_text);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Adds letters over time
+            <string>/*/// Adds letters over time
 if (time &lt; text_length)
 {
     time += spd;
@@ -78,7 +78,7 @@ if (time &lt; text_length)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Render textbox &amp; text
+            <string>/*/// Render textbox &amp; text
 
 draw_set_alpha(alpha);
 if (alpha &lt; 1) alpha += spd/10; else alpha = 1;

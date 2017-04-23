@@ -12,19 +12,28 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_text.gml</script>
     <script>scripts\scr_top_instance_position.gml</script>
+    <script>scripts\scr_actionbox.gml</script>
+    <scripts name="Reference">
+      <script>scripts\scr_text.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt</font>
+    <font>fonts\fnt_name</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_textbox</object>
-    <object>objects\obj_text</object>
-    <object>objects\obj_spawner</object>
-    <object>objects\obj_box</object>
+    <object>objects\obj_Sigma</object>
+    <object>objects\obj_ph</object>
+    <object>objects\obj_actbox</object>
     <object>objects\obj_control</object>
+    <objects name="Reference">
+      <object>objects\obj_player</object>
+      <object>objects\obj_textbox</object>
+      <object>objects\obj_box</object>
+      <object>objects\obj_text</object>
+      <object>objects\obj_spawner</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_play</room>
