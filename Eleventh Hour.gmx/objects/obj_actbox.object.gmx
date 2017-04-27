@@ -33,6 +33,95 @@ depth = depth - instance_number(obj_actbox);
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// ds list
+myList = ds_list_create();
+
+if (ActionOne != 0) {
+    ds_list_add(myList, ActionOne); }
+
+if (ActionTwo != 0) {
+    ds_list_add(myList, ActionTwo); }
+
+if (ActionThree != 0) {
+    ds_list_add(myList, ActionThree); }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="50">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (!position_meeting(mouse_x, mouse_y, self)) and (!position_meeting(mouse_x, mouse_y, obj_actbox_item))
+{
+    with (obj_actbox_item)
+    {
+        instance_destroy();
+    }
+    
+    with (self)
+    {
+        instance_destroy();
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// ds list destroy
+ds_list_destroy(myList);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -98,6 +187,50 @@ draw_text_ext
 
 draw_set_alpha(1);
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var xIncrement = boxwidth/2;
+var yIncrement = boxheight * 1.3;
+
+var xx = x + xIncrement;
+var yy = y + yIncrement;
+
+var item_yIncrement = sprite_get_height(spr_actbox_item);
+
+for (var i = 0; i &lt; ds_list_size(myList); i++)
+{
+    if i == 0
+    {
+        var item = instance_create(xx, yy, obj_actbox_item);
+        item.text = ds_list_find_value(myList, i)
+    }
+    
+    else
+    {
+        var item = instance_create(xx, yy, obj_actbox_item);
+        item.text = ds_list_find_value(myList, i)
+    }
+    
+    yy += item_yIncrement + 2;
+}
 </string>
           </argument>
         </arguments>

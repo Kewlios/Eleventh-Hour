@@ -7,13 +7,20 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_actbox_item</sprite>
     <sprite>sprites\spr_box</sprite>
+    <sprites name="Main Menu - Slasher">
+      <sprite>sprites\spr_start</sprite>
+      <sprite>sprites\spr_exit</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_top_instance_position.gml</script>
     <script>scripts\scr_actionbox.gml</script>
+    <script>scripts\scr_hover.gml</script>
+    <script>scripts\scr_actionbox_itemxxxxx.gml</script>
     <scripts name="Reference">
       <script>scripts\scr_text.gml</script>
     </scripts>
@@ -21,21 +28,28 @@
   <fonts name="fonts">
     <font>fonts\fnt</font>
     <font>fonts\fnt_name</font>
+    <font>fonts\fnt_act</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_Sigma</object>
-    <object>objects\obj_ph</object>
     <object>objects\obj_actbox</object>
+    <object>objects\obj_actbox_item</object>
     <object>objects\obj_control</object>
+    <objects name="Main Menu - Slasher">
+      <object>objects\obj_start</object>
+      <object>objects\obj_exit</object>
+    </objects>
     <objects name="Reference">
       <object>objects\obj_player</object>
       <object>objects\obj_textbox</object>
       <object>objects\obj_box</object>
       <object>objects\obj_text</object>
       <object>objects\obj_spawner</object>
+      <object>objects\obj_ph</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu_Slasher</room>
     <room>rooms\rm_play</room>
   </rooms>
   <help>

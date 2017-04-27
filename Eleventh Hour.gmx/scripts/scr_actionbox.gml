@@ -1,4 +1,4 @@
-/// scr_actionbox("text", x, y);
+/// scr_actionbox("text", x, y, ActionOne, ActionTwo, ActionThree);
 
 //Creates an instance of obj_actbox
 
@@ -21,4 +21,8 @@ with (txt)
     
     boxwidth = text_width + (padding * 2);
     boxheight = text_height + (padding * 2);
+    
+    global.ActionOne = argument3
+    global.ActionTwo = argument4
+    global.ActionThree = argument5
 }
