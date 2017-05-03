@@ -121,7 +121,7 @@ alarm[0] = 30;
             <string>if (can_click == true)
 {
     selected = true;
-    object_textbox2.selected = false;
+    obj_textbox.selected = false;
     keyboard_string = txt;
 }
     
@@ -154,7 +154,7 @@ draw_set_valign(fa_center);
 
 if (txt == "")
 {
-    draw_text(x, y, "NUMBER 1");
+    draw_text(x, y, "NUMBER 2");
 }
 else
 {
@@ -164,7 +164,7 @@ else
     }
     else
     {
-        draw_text(x, y, txt)
+        draw_text(x, y, txt + "|")
     }
 }
 
